@@ -20,12 +20,24 @@ int vectorAverage(vector<int> v)
     sum += v[i];
   }
   return sum / v.size();
-}
+  int vectorMin(vector<int> v)
+  {
+    int min = v[0];
+    for (int i = 1; i < v.size(); i++)
+    {
+      if (v[i] < min)
+      {
+        min = v[i];
+      }
+    }
+    return min;
+  }
 
-int main()
-{
-  vector<int> v = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-  cout << vectorSum(v) << endl;
-  cout << vectorAverage(v) << endl;
-  return 0;
-}
+  int main()
+  {
+    vector<int> v = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    cout << vectorSum(v) << endl;
+    cout << vectorAverage(v) << endl;
+    cout << vectorMin(v) << endl;
+    return 0;
+  }
